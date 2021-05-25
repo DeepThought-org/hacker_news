@@ -1,0 +1,207 @@
+[
+  {
+    "by": "mehdim",
+    "descendants": 27,
+    "id": 27275906,
+    "kids": [
+      27276525,
+      27276500,
+      27276372,
+      27276325,
+      27276398,
+      27276262,
+      27276338,
+      27276360,
+      27276449,
+      27276494
+    ],
+    "score": 82,
+    "time": 1621944882,
+    "title": "Data portability, the forgotten right of GDPR",
+    "type": "story",
+    "url": "https://www.alias.dev/report"
+  },
+  {
+    "by": "reid",
+    "descendants": 185,
+    "id": 27273724,
+    "kids": [
+      27276238,
+      27274056,
+      27275777,
+      27274619,
+      27273965,
+      27274530,
+      27273937,
+      27274342,
+      27274239,
+      27273938,
+      27274183,
+      27274028,
+      27273921,
+      27274850,
+      27274246,
+      27275619,
+      27275983,
+      27275124,
+      27274921,
+      27275355,
+      27274256,
+      27274083,
+      27273916,
+      27275094,
+      27276093,
+      27274324,
+      27274197,
+      27276067,
+      27274824,
+      27274230
+    ],
+    "score": 392,
+    "time": 1621925824,
+    "title": "Use native context menus on Mac OS",
+    "type": "story",
+    "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=34572"
+  },
+  {
+    "by": "vchain-dz",
+    "descendants": 24,
+    "id": 27275691,
+    "kids": [
+      27276366,
+      27276171,
+      27276408,
+      27276250,
+      27276168,
+      27276217,
+      27276391
+    ],
+    "score": 32,
+    "time": 1621943390,
+    "title": "Immudb 1.0 – open-source, immutable database with SQL and verified timetravel",
+    "type": "story",
+    "url": "https://www.codenotary.com/blog/immudb-release-1-0"
+  },
+  {
+    "by": "hiharryhere",
+    "descendants": 68,
+    "id": 27273953,
+    "kids": [
+      27276023,
+      27274348,
+      27274357,
+      27275016,
+      27274409,
+      27275025,
+      27274360,
+      27274231,
+      27274303,
+      27274489,
+      27274378,
+      27276458,
+      27274291
+    ],
+    "score": 97,
+    "time": 1621927976,
+    "title": "Italian seaside residents hit with bygone feudal tax",
+    "type": "story",
+    "url": "https://www.smh.com.au/world/europe/it-s-absurd-italian-seaside-residents-hit-with-bygone-feudal-tax-20210525-p57uxi.html"
+  },
+  {
+    "by": "optimalsolver",
+    "descendants": 10,
+    "id": 27275827,
+    "kids": [
+      27276318,
+      27276345,
+      27276453,
+      27276365,
+      27276424,
+      27276308
+    ],
+    "score": 50,
+    "time": 1621944378,
+    "title": "The 31 Laws Of Fun",
+    "type": "story",
+    "url": "https://www.lesswrong.com/posts/qZJBighPrnv9bSqTZ/31-laws-of-fun"
+  },
+  {
+    "by": "robin_reala",
+    "descendants": 32,
+    "id": 27274992,
+    "kids": [
+      27275543,
+      27275737,
+      27275965,
+      27275525,
+      27275068,
+      27276277,
+      27275276,
+      27276164,
+      27275815
+    ],
+    "score": 97,
+    "time": 1621937342,
+    "title": "GCHQ’s mass data-sharing violated right to privacy, court rules",
+    "type": "story",
+    "url": "https://www.theguardian.com/uk-news/2021/may/25/gchqs-mass-data-sharing-violated-right-to-privacy-court-rules"
+  },
+  {
+    "by": "onemind",
+    "descendants": 6,
+    "id": 27272634,
+    "kids": [
+      27274761,
+      27275030
+    ],
+    "score": 59,
+    "time": 1621917319,
+    "title": "Bird Architecture",
+    "type": "story",
+    "url": "https://mitpress.mit.edu/blog/hidden-architecture-birds"
+  },
+  {
+    "by": "carlostrevino",
+    "id": 27275783,
+    "score": 1,
+    "time": 1621944062,
+    "title": "Fractional (YC W21) is hiring a product engineer",
+    "type": "job",
+    "url": "https://www.ycombinator.com/companies/fractional/jobs/YftyxZJ-product-engineer"
+  },
+  {
+    "by": "seanhandley",
+    "descendants": 7,
+    "id": 27273657,
+    "kids": [
+      27276355,
+      27275826,
+      27276166,
+      27274925,
+      27273818
+    ],
+    "score": 41,
+    "time": 1621925357,
+    "title": "ORBIS: The Stanford Geospatial Network Model of the Roman World",
+    "type": "story",
+    "url": "https://orbis.stanford.edu/"
+  },
+  {
+    "by": "matt_d",
+    "descendants": 17,
+    "id": 27265329,
+    "kids": [
+      27275850,
+      27275634,
+      27276239,
+      27274734,
+      27274629,
+      27275838
+    ],
+    "score": 57,
+    "time": 1621869415,
+    "title": "RefinedC: Automating Foundational Verification of C Code with Refined Ownership",
+    "type": "story",
+    "url": "https://plv.mpi-sws.org/refinedc/"
+  }
+]
