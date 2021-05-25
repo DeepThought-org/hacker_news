@@ -1,13 +1,13 @@
 import 'dart:convert';
 
 import 'package:hacker_news/data/client/http_client.dart';
-import 'package:hacker_news/data/dto/hacker_news_dto.dart';
+import 'package:hacker_news/data/dto/hacker_news_story_dto.dart';
 import 'package:hacker_news/data/exception/http_exception.dart';
 
 abstract class RemoteHackerNewsDataSource {
   Future<List<int>> topStoryIds();
 
-  Future<HackerNewsDto> newsById(int id);
+  Future<HackerNewsStoryDto> newsById(int id);
 }
 
 class RemoteHackerNewsDataSourceImpl implements RemoteHackerNewsDataSource {
@@ -26,9 +26,9 @@ class RemoteHackerNewsDataSourceImpl implements RemoteHackerNewsDataSource {
   }
 
   @override
-  Future<HackerNewsDto> newsById(int id) async {
+  Future<HackerNewsStoryDto> newsById(int id) async {
     final response = await _httpClient.get("item/$id.json");
 
-    return HackerNewsDto.fromJson(jsonDecode(response.body));
+    return HackerNewsStoryDto.fromJson(jsonDecode(response.body));
   }
 }
