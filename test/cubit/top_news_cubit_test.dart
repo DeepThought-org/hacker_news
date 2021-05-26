@@ -43,7 +43,21 @@ void main() {
     },
     expect: () {
       final mapped = hackerNewsList.map((e) => e.toItem()).toList();
-      return [TopNewsLoadingState(), TopNewsLoadedState(mapped)];
+      return [TopNewsState.loading(), TopNewsState.loaded(mapped)];
     },
+  );
+
+  blocTest<TopNewsCubit, TopNewsState>(
+      'when top news list is empty, emit empty state',
+      build: () {
+        hackerNewsService.hackerNewsList = [];
+        return cubit;
+      },
+      act: (cubit) {
+        cubit.loadTopNews();
+      },
+      expect: () {
+        return [TopNewsState.loading(), TopNewsState.empty()];
+      }
   );
 }

@@ -16,6 +16,8 @@ class TopNewsBody extends StatelessWidget {
         return _Error();
       case TopNewsLoadedState:
         return _Loaded((cubit.state as TopNewsLoadedState).topNewsList);
+      case TopNewsEmptyState:
+        return _Empty();
       default:
         return _Loading();
     }
@@ -52,5 +54,12 @@ class _Loaded extends StatelessWidget {
         itemCount: _topNewsItem.length,
       ),
     );
+  }
+}
+
+class _Empty extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(child: Center(child: Text("")));
   }
 }

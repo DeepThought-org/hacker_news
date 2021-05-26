@@ -11,6 +11,8 @@ class TopNewsState extends Equatable {
 
   factory TopNewsState.error(String message) => TopNewsErrorState(message);
 
+  factory TopNewsState.empty() = TopNewsEmptyState;
+
   @override
   List<Object?> get props => [];
 }
@@ -34,3 +36,5 @@ class TopNewsErrorState extends TopNewsState {
   @override
   List<Object?> get props => [message];
 }
+
+class TopNewsEmptyState extends TopNewsState {}
