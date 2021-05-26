@@ -3,6 +3,7 @@ import 'package:hacker_news/data/data_source/local_hacker_news_data_source.dart'
 import 'package:hacker_news/data/data_source/remote_hacker_news_data_source.dart';
 import 'package:hacker_news/data/repository/hacker_news_repository.dart';
 import 'package:hacker_news/domain/exception/http_exception_describer.dart';
+import 'package:hacker_news/domain/service/hacker_news_service.dart';
 import 'package:hacker_news/domain/use_case/get_top_news_list_use_case.dart';
 import 'package:hacker_news/presentation/ui/top_news/top_news_cubit.dart';
 
@@ -23,6 +24,8 @@ void initializeGetIt() {
   /**
    * Domain
    */
+  getIt.registerFactory<HackerNewsService>(() => HackerNewsServiceImpl(getIt()));
+
   getIt.registerLazySingleton(() => HttpExceptionDescriber());
   getIt.registerFactory(() => GetTopNewsListUseCase(getIt(), getIt()));
 
