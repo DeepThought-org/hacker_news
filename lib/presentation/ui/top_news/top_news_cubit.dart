@@ -14,7 +14,7 @@ class TopNewsCubit extends Cubit<TopNewsState> {
   void loadTopNews() async {
     emit(TopNewsState.loading());
     try {
-      final topNews = await _getTopNewsListUseCase.call();
+      final topNews = await _getTopNewsListUseCase();
       final mapped = topNews.map((e) => e.toItem()).toList();
       emit(TopNewsState.loaded(mapped));
     } on DescribedException catch (e) {
