@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:hacker_news/presentation/ui/top_news/item/top_news_item.dart';
+import 'package:hacker_news/presentation/ui/top_news/component/top_news_empty_body.dart';
+import 'package:hacker_news/presentation/ui/top_news/component/top_news_error_body.dart';
+import 'package:hacker_news/presentation/ui/top_news/component/top_news_loaded_body.dart';
+import 'package:hacker_news/presentation/ui/top_news/component/top_news_loading_body.dart';
 import 'package:hacker_news/presentation/ui/top_news/top_news_cubit.dart';
 import 'package:hacker_news/presentation/ui/top_news/top_news_state.dart';
 
@@ -11,55 +14,16 @@ class TopNewsBody extends StatelessWidget {
     final cubit = context.watch<TopNewsCubit>();
     switch (cubit.state.runtimeType) {
       case TopNewsLoadingState:
-        return _Loading();
+        return TopNewsLoadingBody();
       case TopNewsErrorState:
-        return _Error();
+        return TopNewsErrorBody();
       case TopNewsLoadedState:
-        return _Loaded((cubit.state as TopNewsLoadedState).topNewsList);
+        return TopNewsLoadedBody(
+            (cubit.state as TopNewsLoadedState).topNewsList);
       case TopNewsEmptyState:
-        return _Empty();
+        return TopNewsEmptyBody();
       default:
-        return _Loading();
+        return TopNewsLoadingBody();
     }
-  }
-}
-
-class _Loading extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Expanded(child: Center(child: CircularProgressIndicator()));
-  }
-}
-
-class _Error extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Expanded(child: Center(child: Text("에러 발생!₩")));
-  }
-}
-
-class _Loaded extends StatelessWidget {
-  _Loaded(this._topNewsItem);
-
-  final List<TopNewsItem> _topNewsItem;
-
-  @override
-  Widget build(BuildContext context) {
-    return Expanded(
-      child: ListView.builder(
-        itemBuilder: (_, index) {
-          final item = _topNewsItem[index];
-          return ListTile(title: Text(item.title));
-        },
-        itemCount: _topNewsItem.length,
-      ),
-    );
-  }
-}
-
-class _Empty extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Expanded(child: Center(child: Text("")));
   }
 }
