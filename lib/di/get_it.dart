@@ -24,10 +24,11 @@ void initializeGetIt() {
   /**
    * Domain
    */
-  getIt.registerFactory<HackerNewsService>(() => HackerNewsServiceImpl(getIt()));
+  getIt.registerFactory<HackerNewsService>(
+      () => HackerNewsServiceImpl(getIt(), getIt()));
 
   getIt.registerLazySingleton(() => HttpExceptionDescriber());
-  getIt.registerFactory(() => GetTopNewsListUseCase(getIt(), getIt()));
+  getIt.registerFactory(() => GetTopNewsListUseCase(getIt()));
 
   /**
    * Presentation

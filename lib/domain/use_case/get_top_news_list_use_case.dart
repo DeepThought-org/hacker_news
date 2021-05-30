@@ -4,16 +4,11 @@ import 'package:hacker_news/domain/model/hacker_news.dart';
 import 'package:hacker_news/domain/service/hacker_news_service.dart';
 
 class GetTopNewsListUseCase {
-  GetTopNewsListUseCase(this._hackerNewsService, this._exceptionDescriber);
+  GetTopNewsListUseCase(this._hackerNewsService);
 
   final HackerNewsService _hackerNewsService;
-  final HttpExceptionDescriber _exceptionDescriber;
 
   Future<List<HackerNews>> call() async {
-    try {
-      return _hackerNewsService.topNewsList();
-    } on Exception catch (e) {
-      throw _exceptionDescriber.describe(e);
-    }
+    return _hackerNewsService.topNewsList();
   }
 }

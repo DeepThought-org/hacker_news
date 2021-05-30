@@ -26,10 +26,7 @@ void main() {
     hackerNewsList = readTestData("hacker_news_story",
         (e) => HackerNewsStoryDto.fromJson(e).toHackerNews());
 
-    cubit = TopNewsCubit(GetTopNewsListUseCase(
-      hackerNewsService,
-      httpExceptionDescriber,
-    ));
+    cubit = TopNewsCubit(GetTopNewsListUseCase(hackerNewsService));
   });
 
   blocTest<TopNewsCubit, TopNewsState>(
