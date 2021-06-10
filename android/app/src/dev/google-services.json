@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "617423050016",
+    "project_id": "hacker-news-dev",
+    "storage_bucket": "hacker-news-dev.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:617423050016:android:f6012e0ba24a2d7b857345",
+        "android_client_info": {
+          "package_name": "dohun.kim.hackernews.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "617423050016-hemdnrg53fb6fc40knn7o9i48mo1ci2g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDO-Pf0hgslPkhX8nJJqjsmPehkyyu4Xe0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "617423050016-hemdnrg53fb6fc40knn7o9i48mo1ci2g.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "617423050016-ckl5ao035uf6k7ib3emnuvng9he5gp39.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "dohun.kim.hackernews.dev"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
