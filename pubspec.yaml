@@ -25,6 +25,7 @@ dependencies:
   beamer: ^0.14.0
 
   firebase_crashlytics: ^2.0.6
+  firebase_analytics: ^8.1.2
 
 dev_dependencies:
   flutter_test:

@@ -1,6 +1,8 @@
 import 'dart:async';
 
 import 'package:beamer/beamer.dart';
+import 'package:firebase_analytics/firebase_analytics.dart';
+import 'package:firebase_analytics/observer.dart';
 import 'package:flutter/material.dart';
 import 'package:hacker_news/di/get_it.dart';
 import 'package:hacker_news/presentation/ui/top_news/top_news_page.dart';
@@ -21,25 +23,29 @@ void main() async {
 
 class MyApp extends StatelessWidget {
   final delegate = BeamerDelegate(
-      locationBuilder: SimpleLocationBuilder(
-        routes: {
-          '/topnews': (_, __) =>
-              BeamPage(
-                title: 'TopNews',
-                child: TopNewsPage(),
-                key: ValueKey('topnews'),
-              ),
-          '/topnews/:id': (_, state) {
-            final id = state.pathParameters['id'];
-            return BeamPage(
+    navigatorObservers: [
+      FirebaseAnalyticsObserver(analytics: FirebaseAnalytics())
+    ],
+    locationBuilder: SimpleLocationBuilder(
+      routes: {
+        '/topnews': (_, __) => BeamPage(
               title: 'TopNews',
-              child: TopNewsDetailPage(topNewsId: id),
-              key: ValueKey('topnews-$id'),
-            );
-          }
-        },
-      ),
-      initialPath: '/topnews'
+              child: TopNewsPage(),
+              key: ValueKey('topnews'),
+              name: 'TopNewsListView',
+            ),
+        '/topnews/:id': (_, state) {
+          final id = state.pathParameters['id'];
+          return BeamPage(
+            title: 'TopNews',
+            child: TopNewsDetailPage(topNewsId: id),
+            key: ValueKey('topnews-$id'),
+            name: 'TopNewsDetailView',
+          );
+        }
+      },
+    ),
+    initialPath: '/topnews',
   );
 
   @override
